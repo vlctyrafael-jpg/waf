@@ -1,0 +1,8 @@
+{
+  "name": "Free VPS",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {}
+  },
+  "hostRequirements": { "cpus": 2 }
+}
