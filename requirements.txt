@@ -1,0 +1,34 @@
+# ============================================================
+#  MLBB WAF Solver + Tester — requirements.txt
+#  Install with:  pip install -r requirements.txt
+# ============================================================
+
+# ── Core web framework (app.py) ──────────────────────────────
+flask>=3.0.0
+werkzeug>=3.0.0
+
+# ── HTTP client with browser impersonation (app.py) ──────────
+curl_cffi>=0.7.0
+
+# ── Headless browser automation ──────────────────────────────
+#    BOTH are needed:
+#      cloakbrowser → app.py warm-pool path (launch_async)
+#      playwright   → kontolsolver.py chromium transport (sync_playwright)
+playwright>=1.40.0
+cloakbrowser==0.6.5
+
+# ── Plain HTTP client (tester.py) ────────────────────────────
+requests>=2.31.0
+
+# ── requests dependencies (usually auto-installed) ───────────
+urllib3>=2.0.0
+certifi>=2023.7.22
+charset-normalizer>=3.0.0
+idna>=3.4
+
+# ── Optional: player info lookup (info.py) ───────────────────
+# aiohttp>=3.9.0
+# websockets>=12.0
+
+# ── Optional: faster async (not required) ────────────────────
+# asyncio>=3.4.3
